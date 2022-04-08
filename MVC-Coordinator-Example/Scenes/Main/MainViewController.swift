@@ -1,0 +1,63 @@
+//
+//  MainViewController.swift
+//  MVC-Coordinator-Example
+//
+//  Created by Artem Mushtakov on 08.04.2022.
+//
+
+import UIKit
+
+class MainViewController: UIViewController {
+
+    // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
+
+    // MARK: - Actions
+    @objc func startTapped(_ sender: UIButton) {
+        coordinator?.coordinateToTabBar()
+    }
+
+    // MARK: - Properties
+    var coordinator: MainStartFlow?
+
+    let startButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Start!", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = UIColor.systemBlue
+        button.layer.cornerRadius = 10
+        button.layer.shadowRadius = 5
+        button.layer.shadowColor = UIColor.systemTeal.cgColor
+        button.layer.shadowOpacity = 1.0
+        button.layer.shadowOffset = CGSize(width: -1, height: 3)
+        button.addTarget(self, action: #selector(startTapped), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+
+}
+
+// MARK: - UI Setup
+extension MainViewController {
+
+    private func setupUI() {
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        }
+        self.view.backgroundColor = .white
+        self.view.addSubview(startButton)
+
+        NSLayoutConstraint.activate([
+            startButton.widthAnchor
+                .constraint(equalToConstant: UIScreen.main.bounds.width / 3),
+            startButton.heightAnchor
+                .constraint(equalToConstant: 50),
+            startButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            startButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+        ])
+    }
+}
+

@@ -3,25 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		ACAE56CB2800278400133CE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE56CA2800278400133CE2 /* AppDelegate.swift */; };
-		ACAE56CD2800278400133CE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE56CC2800278400133CE2 /* SceneDelegate.swift */; };
-		ACAE56CF2800278400133CE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE56CE2800278400133CE2 /* ViewController.swift */; };
+		ACAE56CF2800278400133CE2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE56CE2800278400133CE2 /* MainViewController.swift */; };
 		ACAE56D42800278400133CE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAE56D32800278400133CE2 /* Assets.xcassets */; };
 		ACAE56D72800278400133CE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAE56D52800278400133CE2 /* LaunchScreen.storyboard */; };
+		ACAE56E4280029BB00133CE2 /* CoordinatorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE56E3280029BB00133CE2 /* CoordinatorBase.swift */; };
+		ACAE56E6280029F800133CE2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE56E5280029F800133CE2 /* AppCoordinator.swift */; };
+		ACAE56E928002AE000133CE2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE56E828002AE000133CE2 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ACAE56C72800278400133CE2 /* MVC-Coordinator-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVC-Coordinator-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAE56CA2800278400133CE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ACAE56CC2800278400133CE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ACAE56CE2800278400133CE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACAE56CE2800278400133CE2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ACAE56D32800278400133CE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACAE56D62800278400133CE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACAE56D82800278400133CE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACAE56E3280029BB00133CE2 /* CoordinatorBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorBase.swift; sourceTree = "<group>"; };
+		ACAE56E5280029F800133CE2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		ACAE56E828002AE000133CE2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				ACAE56DE2800287500133CE2 /* App */,
+				ACAE56E2280029A000133CE2 /* Base */,
 				ACAE56E1280028A200133CE2 /* Scenes */,
 				ACAE56E02800289100133CE2 /* Resources */,
 			);
@@ -65,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				ACAE56CA2800278400133CE2 /* AppDelegate.swift */,
-				ACAE56CC2800278400133CE2 /* SceneDelegate.swift */,
+				ACAE56E5280029F800133CE2 /* AppCoordinator.swift */,
 				ACAE56D52800278400133CE2 /* LaunchScreen.storyboard */,
 			);
 			path = App;
@@ -83,9 +88,26 @@
 		ACAE56E1280028A200133CE2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				ACAE56CE2800278400133CE2 /* ViewController.swift */,
+				ACAE56E728002A3100133CE2 /* Main */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		ACAE56E2280029A000133CE2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				ACAE56E3280029BB00133CE2 /* CoordinatorBase.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		ACAE56E728002A3100133CE2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				ACAE56CE2800278400133CE2 /* MainViewController.swift */,
+				ACAE56E828002AE000133CE2 /* MainCoordinator.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +146,7 @@
 				};
 			};
 			buildConfigurationList = ACAE56C22800278400133CE2 /* Build configuration list for PBXProject "MVC-Coordinator-Example" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -158,9 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACAE56CF2800278400133CE2 /* ViewController.swift in Sources */,
+				ACAE56E6280029F800133CE2 /* AppCoordinator.swift in Sources */,
+				ACAE56CF2800278400133CE2 /* MainViewController.swift in Sources */,
 				ACAE56CB2800278400133CE2 /* AppDelegate.swift in Sources */,
-				ACAE56CD2800278400133CE2 /* SceneDelegate.swift in Sources */,
+				ACAE56E928002AE000133CE2 /* MainCoordinator.swift in Sources */,
+				ACAE56E4280029BB00133CE2 /* CoordinatorBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
