@@ -14,6 +14,13 @@
 		ACAE56E4280029BB00133CE2 /* CoordinatorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE56E3280029BB00133CE2 /* CoordinatorBase.swift */; };
 		ACAE56E6280029F800133CE2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE56E5280029F800133CE2 /* AppCoordinator.swift */; };
 		ACAE56E928002AE000133CE2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE56E828002AE000133CE2 /* MainCoordinator.swift */; };
+		ACAE56F328006F5200133CE2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE56F228006F5200133CE2 /* MainView.swift */; };
+		ACAE56F628007A9000133CE2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE56F528007A9000133CE2 /* SecondViewController.swift */; };
+		ACAE56F828007A9800133CE2 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE56F728007A9800133CE2 /* SecondView.swift */; };
+		ACAE56FA28007AA200133CE2 /* SecondCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE56F928007AA200133CE2 /* SecondCoordinator.swift */; };
+		ACAE56FC2800812500133CE2 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE56FB2800812500133CE2 /* MainModel.swift */; };
+		ACAE56FE28017EE400133CE2 /* MainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE56FD28017EE400133CE2 /* MainProtocols.swift */; };
+		ACAE57002801864A00133CE2 /* SecondsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE56FF2801864A00133CE2 /* SecondsProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		ACAE56E3280029BB00133CE2 /* CoordinatorBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorBase.swift; sourceTree = "<group>"; };
 		ACAE56E5280029F800133CE2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		ACAE56E828002AE000133CE2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		ACAE56F228006F5200133CE2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		ACAE56F528007A9000133CE2 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		ACAE56F728007A9800133CE2 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		ACAE56F928007AA200133CE2 /* SecondCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCoordinator.swift; sourceTree = "<group>"; };
+		ACAE56FB2800812500133CE2 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		ACAE56FD28017EE400133CE2 /* MainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocols.swift; sourceTree = "<group>"; };
+		ACAE56FF2801864A00133CE2 /* SecondsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondsProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				ACAE56E728002A3100133CE2 /* Main */,
+				ACAE56F428007A7200133CE2 /* Second */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -104,10 +119,25 @@
 		ACAE56E728002A3100133CE2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				ACAE56FB2800812500133CE2 /* MainModel.swift */,
+				ACAE56F228006F5200133CE2 /* MainView.swift */,
 				ACAE56CE2800278400133CE2 /* MainViewController.swift */,
 				ACAE56E828002AE000133CE2 /* MainCoordinator.swift */,
+				ACAE56FD28017EE400133CE2 /* MainProtocols.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		ACAE56F428007A7200133CE2 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				ACAE56F528007A9000133CE2 /* SecondViewController.swift */,
+				ACAE56F728007A9800133CE2 /* SecondView.swift */,
+				ACAE56F928007AA200133CE2 /* SecondCoordinator.swift */,
+				ACAE56FF2801864A00133CE2 /* SecondsProtocol.swift */,
+			);
+			name = Second;
+			path = ../Second;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,9 +211,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACAE56E6280029F800133CE2 /* AppCoordinator.swift in Sources */,
+				ACAE56F328006F5200133CE2 /* MainView.swift in Sources */,
+				ACAE56FE28017EE400133CE2 /* MainProtocols.swift in Sources */,
+				ACAE56FA28007AA200133CE2 /* SecondCoordinator.swift in Sources */,
+				ACAE56F828007A9800133CE2 /* SecondView.swift in Sources */,
+				ACAE57002801864A00133CE2 /* SecondsProtocol.swift in Sources */,
 				ACAE56CF2800278400133CE2 /* MainViewController.swift in Sources */,
 				ACAE56CB2800278400133CE2 /* AppDelegate.swift in Sources */,
+				ACAE56F628007A9000133CE2 /* SecondViewController.swift in Sources */,
 				ACAE56E928002AE000133CE2 /* MainCoordinator.swift in Sources */,
+				ACAE56FC2800812500133CE2 /* MainModel.swift in Sources */,
 				ACAE56E4280029BB00133CE2 /* CoordinatorBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol MainStartFlow: AnyObject {
-    func coordinateToTabBar()
+    func coordinateSecondViewController()
 }
 
 class MainStartCoordinator: CoordinatorBase, MainStartFlow {
@@ -20,14 +20,19 @@ class MainStartCoordinator: CoordinatorBase, MainStartFlow {
 
     func start() {
         let mainViewController = MainViewController()
+        let mainView = MainView()
+        let mainModel = MainModel()
+        mainViewController.mainView = mainView
+        mainViewController.mainModel = mainModel
         mainViewController.coordinator = self
+        mainView.controller = mainViewController
         navigationController.pushViewController(mainViewController, animated: true)
     }
 
     // MARK: - Flow Methods
-    func coordinateToTabBar() {
-        print("Open TabBar")
-//        let tabBarCoordinator = TabBarCoordinator(navigationController: navigationController)
-//        coordinate(to: tabBarCoordinator)
+
+    func coordinateSecondViewController() {
+        let secondViewControllerCoordinator = SecondCoordinator(navigationController: navigationController)
+        coordinate(to: secondViewControllerCoordinator)
     }
 }
